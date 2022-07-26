@@ -1,8 +1,9 @@
 
 class Stack:
     def __init__(self, size):
-        self.items = [] * null;
+        self.items = [] ;
         self.size = size
+        self.indx=-1
 
     def is_empty(self):
         """
@@ -10,9 +11,9 @@ class Stack:
         Returns true if empty false if not.
         """
         # Write code here
-        if items[0] == null:
-            return true
-        return false
+        if stack.indx == -1:
+            return True
+        return False
 
 
 
@@ -23,26 +24,28 @@ class Stack:
         returns false if not full.
         """
         # Write code here
-        if items[size-1]!=null :
-            return true
-        return false
+        if stack.indx== stack.size-1 :
+            return True
+        return False
 
     def push(self, data):
         """Pushes value to stack if stack is empty"""
         if not self.is_full():
             # Write code here
-            items.append(data)
+            stack.items.append(data)
+            stack.indx=stack.indx+1
 
     def pop(self):
         if not self.is_empty():
             # Write code here
-            items.pop()
+            stack.items.pop()
+            stack.indx=stack.indx-1
 
     def status(self):
         # Write code here
-        for i in range (items):
-            if i!=null:
-                println(i)
+        for i in range(0, len(stack.items)):
+             print(stack.items[i],end="\n")
+             
 
 # Do not change the following code
 size, queries = map(int, input().rstrip().split())
