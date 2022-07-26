@@ -29,13 +29,21 @@ class Stack:
         return False
 
     def push(self, data):
-        """Pushes value to stack if stack is empty"""
+        """
+        Pushes value to stack if stack is empty. 
+        
+        Args:
+        data: The value to be pushed.
+        """
         if not self.is_full():
             # Write code here
             stack.items.append(data)
             stack.indx=stack.indx+1
 
     def pop(self):
+        """ 
+        Pushes the top value out of stack.
+        """
         if not self.is_empty():
             # Write code here
             stack.items.pop()
